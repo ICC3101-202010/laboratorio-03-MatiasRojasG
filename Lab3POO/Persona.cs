@@ -54,56 +54,50 @@ namespace Lab3POO
             get { return horario; }
         }
 
-        public Persona(string nombrE, string ruT, string apellidO, string fechanaC, string nacionalidaD, string roL)
+        //public Persona(string nombrE, string ruT, string apellidO, string fechanaC, string nacionalidaD, string roL)
+        //{
+        //    name = nombrE;
+        //    rut = ruT;
+        //    apellido = apellidO;
+        //    fechanac = fechanaC;
+        //    nacionalidad = nacionalidaD;
+        //    rol = roL;
+        //}
+        public Persona(string namee, string apellidoo, string Rut, string ROL, string fechanacc, string nacionalidadd)
         {
-            name = nombrE;
-            rut = ruT;
-            apellido = apellidO;
-            fechanac = fechanaC;
-            nacionalidad = nacionalidaD;
-            rol = roL;
-        }
-        //Agrega el sueldo
-        public void AgregaSueldo()
-        {
+            name = namee;
+            apellido = apellidoo;
+            rol = ROL;
+            rut = Rut;
+            fechanac = fechanacc;
+            nacionalidad = nacionalidadd;
             if (Rol == "Jefe")
             {
-                sueldo = 6000000;
+            sueldo = 6000000;
+            horario = "9:00am-6:00pm";
             }
-            if (Rol == "Empleado")
+            if (Rol == "Cajero")
             {
-                sueldo = 1500000;
+            sueldo = 1500000;
+            horario = "9:00am-12:00pm, 1:30pm-9:30pm";
             }
             if (Rol == "Auxiliar")
             {
-                sueldo = 800000;
+            sueldo = 800000;
+            horario = "8:30am-12:00pm, 1:00pm-4:00pm, 5:00pm-9:30pm";
             }
             if (Rol == "Supervisor")
             {
-                sueldo = 2500000;
+            sueldo = 2500000;
+            horario = "9:30am-9:00";
             }
-        }
-        //Agrega el horario
-        public void AgregaHorario()
-        {
-            if (Rol == "Jefe")
+            if (Rol=="Cliente")
             {
-                horario = "9:00am-6:00pm";
+                sueldo = 0;
+                horario = "No definido";
             }
-            if (Rol == "Empleado")
-            {
-                horario = "9:00am-12:00pm, 1:30pm-9:30pm";
-            }
-            if (Rol == "Auxiliar")
-            {
-                horario = "8:30am-12:00pm, 1:00pm-4:00pm, 5:00pm-9:30pm";
-            }
-            if (Rol == "Supervisor")
-            {
-                horario = "9:30am-9:00";
             }
 
-        }
         //Metodo que muestra la info de la persona
         public string Informacion()
         {
