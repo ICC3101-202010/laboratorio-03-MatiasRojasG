@@ -13,11 +13,22 @@ namespace Lab3POO
         private int precio;
         private string marca;
         private int stock;
+        private double lts;
+        private string comp;
 
         public string Name
         {
             get { return name; }
         }
+        public string Comp
+        {
+            get { return comp; }
+        }
+        public double Lts
+        {
+            get { return lts; }
+        }
+
         public int Precio
         {
             get { return precio; }
@@ -31,17 +42,33 @@ namespace Lab3POO
             get { return stock; }
         }
 
-
-        public Producto(string nombrep, int preciop, string marcap, int stockp)
+        public Producto(string nombrep, int preciop, string marcap, int stockp, double ltsp, string l)
         {
             name = nombrep;
             precio = preciop;
             marca = marcap;
             stock = stockp;
+            lts = ltsp;
+            comp = l;
         }
+        //Resta 1 al stock luego de la compra
+        public int CompraProducto()
+        {
+            return stock -= 1;
+        }
+
+
         public string InformacionP()
         {
-            return "Nombre: " + Name + " " + "Marca :" + Marca + " " + "Precio: " + Precio + " " + "Stock: " + Stock;
+            if (comp=="l")
+            {
+                return "Nombre: " + Name + " " + "Marca :" + Marca + " " + "Precio: " + Precio + " " + "Lts: " + Lts + " " + "Stock: " + Stock;
+            }
+            else
+            {
+                return "Nombre: " + Name + " " + "Marca :" + Marca + " " + "Precio: " + Precio + " " + "Gramos: " + Lts + " " + "Stock: " + Stock;
+            }
+            
         }
     }
 }

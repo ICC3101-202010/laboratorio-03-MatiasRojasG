@@ -13,18 +13,19 @@ namespace Lab3POO
         public static void Main(string[] args)
         {
             string respuesta;//Menu
-            string respuesta1;//Desea comprar?
+            string respuesta1;//Liquido o Solido?
+            string respuesta2;//Que desea?
             GestorSuper a = new GestorSuper();
             //Agrego nombres a lista
             a.AN();
             //Agrego apellidos a lista
             a.AA();
             //Agrego Productos
-            //a.AP();
+
             //Defino Empleados:
 
             //Defino Jefe
-            Persona Jefe1 = new Persona(a.DN(), a.DA(),"203948576", "Jefe", "10/07/1999", "Chilena"); ;
+            Persona Jefe1 = new Persona(a.DN(), a.DA(), "203948576", "Jefe", "10/07/1999", "Chilena"); ;
             a.AgregaJefe(Jefe1);
             //Defino Auxiliar
             Persona Auxiliar1 = new Persona(a.DN(), a.DA(), "193874978", "Auxiliar", "12/12/1992", "Chilena");
@@ -75,9 +76,55 @@ namespace Lab3POO
             Persona Cliente15 = new Persona(a.DN(), a.DA(), "222289327", "Cliente", "11/05/2005", "Alemana");
             a.AgregaCliente(Cliente15);
 
-            //Producto 1
-            Producto Cafe = new Producto("Capuccino", 4000, "Starbucks", 20);
-            a.AgregaProducto(Cafe);
+            //Productos liquidos
+            Producto Cafe1 = new Producto("Capuccino", 4000, "Starbucks", 20, 0.4, "l");
+            a.AgregaProductol(Cafe1);
+            Producto Cafe2 = new Producto("Mocha", 4000, "Starbucks", 20, 0.4, "l");
+            a.AgregaProductol(Cafe2);
+            Producto Leche2 = new Producto("Leche Natural SemiDescremada", 700, "Colun", 20, 1.0, "l");
+            a.AgregaProductol(Leche2);
+
+            Producto Bebida1 = new Producto("Pap", 1200, "Bilz y Pap", 20, 1.5, "l");
+            a.AgregaProductol(Bebida1);
+            Producto Bebida2 = new Producto("Bilz", 1200, "Bilz y Pap", 20, 1.5, "l");
+            a.AgregaProductol(Bebida2);
+            Producto Bebida3 = new Producto("Coca-Cola", 1200, "Coca-Cola", 20, 2.0, "l");
+            a.AgregaProductol(Bebida3);
+
+            Producto Leche1 = new Producto("Leche Natural Entera", 1200, "Colun", 20, 1.0, "l");
+            a.AgregaProductol(Leche1);
+
+            Producto Agua1 = new Producto("Benedictino", 800, "Coca-Cola", 20, 0.8, "l");
+            a.AgregaProductol(Agua1);
+            Producto Agua2 = new Producto("Cachantun", 820, "Coca-Cola", 20, 0.8, "l");
+            a.AgregaProductol(Agua2);
+            Producto Jugo1 = new Producto("Naranja", 800, "Watts", 20, 0.8, "l");
+            a.AgregaProductol(Agua1);
+
+            //Productos Solidos
+            Producto Almuerzo1 = new Producto("Arroz con Pollo", 3200, "SM20", 20, 0.4, "s");
+            a.AgregaProductos(Almuerzo1);
+            Producto Almuerzo2 = new Producto("Pollo con papas fritas", 3000, "SM20", 20, 0.4, "s");
+            a.AgregaProductos(Almuerzo2);
+            Producto Almuerzo3 = new Producto("Tallarines con carne", 3000, "SM20", 20, 0.4, "s");
+            a.AgregaProductos(Almuerzo3);
+
+            Producto Sandwich1 = new Producto("Sandwich Ave Mayo", 1200, "SM20", 20, 0.2, "s");
+            a.AgregaProductos(Bebida1);
+            Producto Sandwich2 = new Producto("Barros Luco", 1200, "SM20", 20, 0.2, "s");
+            a.AgregaProductos(Bebida2);
+
+            Producto Mantequilla1 = new Producto("Mantequilla", 1000, "Colun", 20, 0.2, "s");
+            a.AgregaProductos(Mantequilla1);
+            Producto Mantequilla2 = new Producto("Mantequilla", 1200, "Soprole", 20, 0.2, "s");
+            a.AgregaProductos(Mantequilla2);
+
+            Producto Pan1 = new Producto("Pan Marraqueta", 1000, "SM20", 20, 1.0, "s");
+            a.AgregaProductos(Agua1);
+            Producto Pan2 = new Producto("Pan de Molde", 820, "Bimbo", 20, 0.5, "s");
+            a.AgregaProductos(Pan2);
+            Producto Queso1 = new Producto("Queso Gouda", 800, "Colun", 20, 0.2, "s");
+            a.AgregaProductos(Queso1);
 
 
 
@@ -94,7 +141,8 @@ namespace Lab3POO
                 Console.WriteLine(" ");
                 Console.WriteLine("1) Ver trabajadores");
                 Console.WriteLine("2) Ver productos");
-                Console.WriteLine("3) Salir");
+                Console.WriteLine("3) Comprar Producto");
+                Console.WriteLine("4) Salir");
                 respuesta = Console.ReadLine();
                 if (respuesta == "1")
                 {
@@ -105,22 +153,58 @@ namespace Lab3POO
                 }
                 if (respuesta == "2")
                 {
-                    a.VerProductos();
+                    Console.WriteLine("Productos Liquidos:");
+                    a.VerProductosl();
+                    Console.WriteLine(" ");
+                    Console.WriteLine("Productos Solidos:");
+                    a.VerProductoss();
+                    //Dividir productos en 3 de 10 y que el usuario elija
+                    //Luego si la respuesta es igual a algun objeto de la lista, aplicar metodos para quitar stock
+                    //Antes debe salir al azar algun comprador, ejecutar la compra y luego dar la boleta
+                }
+                if (respuesta == "3")
+                {
                     while (true)
                     {
-                        Console.WriteLine("¿Desea comprar alguno?");
+                        Console.WriteLine("Liquido, Solido, Salir");
                         respuesta1 = Console.ReadLine();
-                        //if (respuesta1 == "Si")
-                        //{
-                        //Cual desea, mostrar precio, seguro?, if si {crear metodo: quitar stock}
-                        //}
-                        if (respuesta1 == "No")
+                        if (respuesta1 == "Liquido")
+                        {
+                            a.VerProductosl();
+
+                            Console.WriteLine("¿Que desea?");
+                            respuesta2 = Console.ReadLine();
+                            foreach (Producto index in a.productosl)
+                            {
+                                if (respuesta2 == index.Name)
+                                {
+                                        index.CompraProducto();
+                                        Console.WriteLine(index.InformacionP());
+                                }
+                            }
+                        }
+                        if (respuesta1 == "Solido")
+                        {
+                            a.VerProductoss();
+                            Console.WriteLine("¿Que desea?");
+                            respuesta2 = Console.ReadLine();
+                            foreach (Producto index in a.productoss)
+                            {
+                                if (respuesta2 == index.Name)
+                                {
+                                    index.CompraProducto();
+                                    Console.WriteLine(index.InformacionP());
+                                }
+                            }
+                        }
+                    
+                        if (respuesta1 == "Salir")
                         {
                             break;
                         }
                     }
                 }
-                if (respuesta == "3")
+                if (respuesta == "4")
                 {
                     Console.WriteLine("Saliendo...");
                     break;

@@ -101,8 +101,7 @@ namespace Lab3POO
         //Metodo que muestra la info de la persona
         public string Informacion()
         {
-            return "Nombre:" + Name + " " + Apellido;
+            return "Nombre: " + Name + " " + Apellido;
         }
-
     }
 }

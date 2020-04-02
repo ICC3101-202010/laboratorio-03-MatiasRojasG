@@ -10,7 +10,8 @@ namespace Lab3POO
     public class GestorSuper
     {
         //Lista de productos
-        public List<Producto> productos = new List<Producto> { };
+        public List<Producto> productosl = new List<Producto> { };
+        public List<Producto> productoss = new List<Producto> { };
         //Lista de clientes
         public List<Persona> clientes = new List<Persona> { };
         //Lista de empleados
@@ -53,9 +54,13 @@ namespace Lab3POO
             auxiliares.Add(persona);
         }
         //Agrega producto
-        public void AgregaProducto(Producto producto)
+        public void AgregaProductol(Producto producto)
         {
-            productos.Add(producto);
+            productosl.Add(producto);
+        }
+        public void AgregaProductos(Producto producto)
+        {
+            productoss.Add(producto);
         }
 
 
@@ -178,12 +183,24 @@ namespace Lab3POO
             Console.WriteLine(" ");
         }
         //Metodo para ver Productos
-        public void VerProductos()
+        public void VerProductosl()
         {
-            foreach (Producto ip in productos)
+            foreach (Producto ip in productosl)
             {
                 Console.WriteLine(ip.InformacionP());
             }
+        }
+        public void VerProductoss()
+        {
+            foreach (Producto ind in productoss)
+            {
+                Console.WriteLine(ind.InformacionP());
+            }
+        }
+        public void Compra(Persona cliente, Producto producto)
+        {
+            //Cliente Compra
+            //Resta producto de la lista
         }
 
     }
