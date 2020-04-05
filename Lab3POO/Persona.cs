@@ -96,7 +96,9 @@ namespace Lab3POO
                 sueldo = 0;
                 horario = "No definido";
             }
-            }
+        }
+
+
 
         //Metodo que muestra la info de la persona
         public string Informacion()

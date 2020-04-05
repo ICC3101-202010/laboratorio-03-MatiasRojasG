@@ -10,20 +10,23 @@ namespace Lab3POO
     public class GestorSuper
     {
         //Lista de productos
-        public List<Producto> productosl = new List<Producto> { };
-        public List<Producto> productoss = new List<Producto> { };
+        public List<Producto> productoslB = new List<Producto> { };
+        public List<Producto> productossB = new List<Producto> { };
         //Lista de clientes
-        public List<Persona> clientes = new List<Persona> { };
+        public List<Persona> clientesB = new List<Persona> { };
         //Lista de empleados
-        public List<Persona> cajeros = new List<Persona> { };
+        public List<Persona> cajerosB = new List<Persona> { };
         //Lista de jefes
-        public List<Persona> jefes = new List<Persona> { };
+        public List<Persona> jefesB = new List<Persona> { };
         //Lista de auxiliares
-        public List<Persona> auxiliares = new List<Persona> { };
+        public List<Persona> auxiliaresB = new List<Persona> { };
         //Lista de nombres
-        public List<string> nombres = new List<string> { };
+        public List<string> nombresB = new List<string> { };
         //Lista de apellidos
-        public List<string> apellidos = new List<string> { };
+        public List<string> apellidosB = new List<string> { };
+        //Lista Auxiliares
+        public List<Persona> Supervisores = new List<Persona> { };
+
 
 
 
@@ -36,31 +39,35 @@ namespace Lab3POO
         //Agrega persona a cliente
         public void AgregaCliente(Persona persona)
         {
-            clientes.Add(persona);
+            clientesB.Add(persona);
+        }
+        public void AgregaSupervisor(Persona persona)
+        {
+            Supervisores.Add(persona);
         }
         //Agrega persona a empleado
         public void AgregaCajero(Persona persona)
         {
-            cajeros.Add(persona);
+            cajerosB.Add(persona);
         }
         //Agrega persona a jefes
         public void AgregaJefe(Persona persona)
         {
-            jefes.Add(persona);
+            jefesB.Add(persona);
         }
         //Agrega persona a auxiliares
         public void AgregaAuxiliar(Persona persona)
         {
-            auxiliares.Add(persona);
+            auxiliaresB.Add(persona);
         }
         //Agrega producto
         public void AgregaProductol(Producto producto)
         {
-            productosl.Add(producto);
+            productoslB.Add(producto);
         }
         public void AgregaProductos(Producto producto)
         {
-            productoss.Add(producto);
+            productossB.Add(producto);
         }
 
 
@@ -70,14 +77,14 @@ namespace Lab3POO
         public string DN()
         {
             var random = new Random();
-            int index = random.Next(nombres.Count);
-            return nombres[index];
+            int index = random.Next(nombresB.Count);
+            return nombresB[index];
         }
         public string DA()
         {
             var random = new Random();
-            int index = random.Next(apellidos.Count);
-            return apellidos[index];
+            int index = random.Next(apellidosB.Count);
+            return apellidosB[index];
         }
 
 
@@ -88,54 +95,54 @@ namespace Lab3POO
         //Añado nombres a su lista
         public void AN()
         {
-            nombres.Add("Miguel");
-            nombres.Add("Arturo");
-            nombres.Add("Jorge");
-            nombres.Add("Armando");
-            nombres.Add("Luis");
-            nombres.Add("Adolfo");
-            nombres.Add("Eufemiano");
-            nombres.Add("Carlos");
-            nombres.Add("Alejandro");
-            nombres.Add("Gabriel");
-            nombres.Add("Mariana");
-            nombres.Add("Beatriz");
-            nombres.Add("Helen");
-            nombres.Add("Maria");
-            nombres.Add("Paola");
-            nombres.Add("Paulina");
-            nombres.Add("Luisa");
-            nombres.Add("Marta");
-            nombres.Add("Pilar");
-            nombres.Add("Trinidad");
-            nombres.Add("Juan");
-            nombres.Add("David");
+            nombresB.Add("Miguel");
+            nombresB.Add("Arturo");
+            nombresB.Add("Jorge");
+            nombresB.Add("Armando");
+            nombresB.Add("Luis");
+            nombresB.Add("Adolfo");
+            nombresB.Add("Eufemiano");
+            nombresB.Add("Carlos");
+            nombresB.Add("Alejandro");
+            nombresB.Add("Gabriel");
+            nombresB.Add("Mariana");
+            nombresB.Add("Beatriz");
+            nombresB.Add("Helen");
+            nombresB.Add("Maria");
+            nombresB.Add("Paola");
+            nombresB.Add("Paulina");
+            nombresB.Add("Luisa");
+            nombresB.Add("Marta");
+            nombresB.Add("Pilar");
+            nombresB.Add("Trinidad");
+            nombresB.Add("Juan");
+            nombresB.Add("David");
         }
         //Añado apellidos a su lista
         public void AA()
         {
-            apellidos.Add("Pallares");
-            apellidos.Add("Cervero");
-            apellidos.Add("Parras");
-            apellidos.Add("Rius");
-            apellidos.Add("Funes");
-            apellidos.Add("Escrig");
-            apellidos.Add("Larraz");
-            apellidos.Add("Sendra");
-            apellidos.Add("Alamillo");
-            apellidos.Add("Lloveras");
-            apellidos.Add("Sotelo");
-            apellidos.Add("Pacheco");
-            apellidos.Add("Arias");
-            apellidos.Add("Garcia");
-            apellidos.Add("Mena");
-            apellidos.Add("Rouco");
-            apellidos.Add("Coleto");
-            apellidos.Add("Valderrama");
-            apellidos.Add("Soldevila");
-            apellidos.Add("Arnau");
-            apellidos.Add("Berenguer");
-            apellidos.Add("Zabala");
+            apellidosB.Add("Pallares");
+            apellidosB.Add("Cervero");
+            apellidosB.Add("Parras");
+            apellidosB.Add("Rius");
+            apellidosB.Add("Funes");
+            apellidosB.Add("Escrig");
+            apellidosB.Add("Larraz");
+            apellidosB.Add("Sendra");
+            apellidosB.Add("Alamillo");
+            apellidosB.Add("Lloveras");
+            apellidosB.Add("Sotelo");
+            apellidosB.Add("Pacheco");
+            apellidosB.Add("Arias");
+            apellidosB.Add("Garcia");
+            apellidosB.Add("Mena");
+            apellidosB.Add("Rouco");
+            apellidosB.Add("Coleto");
+            apellidosB.Add("Valderrama");
+            apellidosB.Add("Soldevila");
+            apellidosB.Add("Arnau");
+            apellidosB.Add("Berenguer");
+            apellidosB.Add("Zabala");
         }
 
 
@@ -149,7 +156,7 @@ namespace Lab3POO
         public void InfoJ()
         {
             Console.WriteLine("Mostrando Jefes:");
-            foreach (Persona ij in jefes)
+            foreach (Persona ij in jefesB)
             {
                 Console.WriteLine(ij.Informacion());
             }
@@ -157,8 +164,8 @@ namespace Lab3POO
         }
         public void InfoE()
         {
-            Console.WriteLine("Mostrando Empleados:");
-            foreach (Persona ie in cajeros)
+            Console.WriteLine("Mostrando Cajeros:");
+            foreach (Persona ie in cajerosB)
             {
                 Console.WriteLine(ie.Informacion());
             }
@@ -167,7 +174,7 @@ namespace Lab3POO
         public void InfoA()
         {
             Console.WriteLine("Mostrando Auxiliares");
-            foreach (Persona ia in auxiliares)
+            foreach (Persona ia in auxiliaresB)
             {
                 Console.WriteLine(ia.Informacion());
             }
@@ -176,7 +183,7 @@ namespace Lab3POO
         public void InfoC()
         {
             Console.WriteLine("Mostrando Clientes:");
-            foreach (Persona ic in clientes)
+            foreach (Persona ic in clientesB)
             {
                 Console.WriteLine(ic.Informacion());
             }
@@ -185,14 +192,14 @@ namespace Lab3POO
         //Metodo para ver Productos
         public void VerProductosl()
         {
-            foreach (Producto ip in productosl)
+            foreach (Producto ip in productoslB)
             {
                 Console.WriteLine(ip.InformacionP());
             }
         }
         public void VerProductoss()
         {
-            foreach (Producto ind in productoss)
+            foreach (Producto ind in productossB)
             {
                 Console.WriteLine(ind.InformacionP());
             }
