@@ -34,7 +34,14 @@ namespace Lab3POO
             string PrecioProducto;
             string ltsProducto;
 
+            string cuantos;
+            string cuantos1;
+            string cuantos2;
+            string cuantos3;
+            string cuantos4;
+            string cuantos5;
 
+            string cuantos7;
 
 
 
@@ -54,7 +61,7 @@ namespace Lab3POO
             //Defino Empleados:
 
             //Defino Jefe
-            Console.WriteLine("1) Interaccion:");
+            Console.WriteLine("1) Programa Principal");
             Console.WriteLine("2) Bonus");
 
             respuestaprimera = Console.ReadLine();
@@ -204,12 +211,21 @@ namespace Lab3POO
                             Console.WriteLine("Productos Solidos:");
                             a.VerProductoss();
                         }
+
+
+
+
+
+
                         if (respuesta == "1")
                         {
                             //Se crea al jefe
-                            Console.WriteLine("Es 1 jefe");
                             int i;
-                            for (i = 0; i <= 0; i++)
+                            Console.WriteLine("Creacion Clientes (15)");
+                            Console.WriteLine("¿Cuantos desea ingresar?");
+                            cuantos = Console.ReadLine();
+                            int intcuantos = System.Convert.ToInt32(cuantos);
+                            for (i = 1; i <= intcuantos; i++)
                             {
                                 Console.WriteLine("Ingrese Nombre del Jefe:");
                                 NombreJefe = Console.ReadLine();
@@ -224,11 +240,13 @@ namespace Lab3POO
                                 Persona Jefe = new Persona(NombreJefe, ApellidoJefe, RutJefe, "Jefe", FNJefe, NacJefe);
                                 a.AgregaJefe(Jefe);
                             }
-                            //Se crean a los cajeros
-                            //Se mantienen los nombres ya que al ser un for las variables toman otros valores, ademas es quita menos tiempo
+                            //Se crean cajeros
                             int i1;
-                            Console.WriteLine("Son 3 cajeros");
-                            for (i1 = 1; i1 <= 3; i1++)
+                            Console.WriteLine("Creacion Cajeros");
+                            Console.WriteLine("¿Cuantos desea ingresar?");
+                            cuantos1 = Console.ReadLine();
+                            int intcuantos1 = System.Convert.ToInt32(cuantos1);
+                            for (i1 = 1; i1 <= intcuantos1; i1++)
                             {
                                 Console.WriteLine("Ingrese Nombre del Cajero "+" "+i1);
                                 NombreCajero1 = Console.ReadLine();
@@ -244,9 +262,13 @@ namespace Lab3POO
                                 a.AgregaCajero(Cajero1);
                             }
                             //Se crean a los auxiliares
+
                             int i2;
-                            Console.WriteLine("Son 2 Auxiliares");
-                            for (i2 = 1; i2 <= 2; i2++)
+                            Console.WriteLine("Creacion Auxiliares");
+                            Console.WriteLine("¿Cuantos desea ingresar?");
+                            cuantos2 = Console.ReadLine();
+                            int intcuantos2 = System.Convert.ToInt32(cuantos2);
+                            for (i2 = 1; i2 <= intcuantos2; i2++)
                             {
                                 Console.WriteLine("Ingrese Nombre del Auxiliar"+" "+i2);
                                 NombreCajero1 = Console.ReadLine();
@@ -261,10 +283,14 @@ namespace Lab3POO
                                 Persona Auxiliar1 = new Persona(NombreCajero1, ApellidoCajero1, RutCajero1, "Auxiliar", FNCajero1, NacCajero1);
                                 a.AgregaAuxiliar(Auxiliar1);
                             }
+
                             //Se crea el supervisor
                             int i3;
-                            Console.WriteLine("Es 1 Supervisor:");
-                            for (i3 = 1; i3 < 2; i3++)
+                            Console.WriteLine("Creacion Supervisor");
+                            Console.WriteLine("¿Cuantos desea ingresar?");
+                            cuantos3 = Console.ReadLine();
+                            int intcuantos3 = System.Convert.ToInt32(cuantos3);
+                            for (i3 = 1; i3 <= intcuantos3; i3++)
                             {
                                 Console.WriteLine("Ingrese Nombre del Supervisor" + " " + i3);
                                 NombreCajero1 = Console.ReadLine();
@@ -279,13 +305,37 @@ namespace Lab3POO
                                 Persona Auxiliar1 = new Persona(NombreCajero1, ApellidoCajero1, RutCajero1, "Supervisor", FNCajero1, NacCajero1);
                                 a.AgregaSupervisor(Auxiliar1);
                             }
+                            //Se crean a los clientes
+                            int i7;
+                            Console.WriteLine("Creacion Clientes");
+                            Console.WriteLine("¿Cuantos desea ingresar?");
+                            cuantos7 = Console.ReadLine();
+                            int intcuantos7 = System.Convert.ToInt32(cuantos7);
+                            for (i7 = 1; i7 <= intcuantos7; i7++)
+                            {
+                                Console.WriteLine("Ingrese Nombre del Cliente" + " " + i7);
+                                NombreCajero1 = Console.ReadLine();
+                                Console.WriteLine("Ingrese Apellido del Cliente" + " " + i7);
+                                ApellidoCajero1 = Console.ReadLine();
+                                Console.WriteLine("Ingrese RUT del Cliente" + " " + i7);
+                                RutCajero1 = Console.ReadLine();
+                                Console.WriteLine("Ingrese Fecha de Nacimiento del Cliente" + " " + i7);
+                                FNCajero1 = Console.ReadLine();
+                                Console.WriteLine("Ingrese Nacionalidad del Cliente" + " " + i7);
+                                NacCajero1 = Console.ReadLine();
+                                Persona Cliente = new Persona(NombreCajero1, ApellidoCajero1, RutCajero1, "Cliente", FNCajero1, NacCajero1);
+                                a.AgregaCliente(Cliente);
+                            }
 
 
 
-                            //Se crean los productos
+                            //Se crean los productos liquidos
                             int i4;
-                            Console.WriteLine("Creacion de Productos Liquidos:");
-                            for (i4 = 1; i4 < 16; i4++)
+                            Console.WriteLine("Creacion Productos Liquios");
+                            Console.WriteLine("¿Cuantos desea ingresar?");
+                            cuantos4 = Console.ReadLine();
+                            int intcuantos4 = System.Convert.ToInt32(cuantos4);
+                            for (i4 = 1; i4 <= intcuantos4; i4++)
                             {
                                 Console.WriteLine("Ingrese Nombre del Producto" + " " + i4);
                                 NombreProducto = Console.ReadLine();
@@ -303,9 +353,13 @@ namespace Lab3POO
                                 Producto Liquido1 = new Producto(NombreProducto, intPrecioProducto, MarcaProducto, intStockProducto, dblts, "l");
                                 a.AgregaProductol(Liquido1);
                             }
+                            //Se crean los productos solidos
                             int i5;
-                            Console.WriteLine("Creacion de Productos Solidos:");
-                            for (i5 = 1; i5 < 16; i5++)
+                            Console.WriteLine("Creacion Productos Solidos");
+                            Console.WriteLine("¿Cuantos desea ingresar?");
+                            cuantos5 = Console.ReadLine();
+                            int intcuantos5 = System.Convert.ToInt32(cuantos5);
+                            for (i5 = 1; i5 <= intcuantos5; i5++)
                             {
                                 Console.WriteLine("Ingrese Nombre del Producto" + " " + i5);
                                 NombreProducto = Console.ReadLine();
@@ -323,6 +377,16 @@ namespace Lab3POO
                                 Producto Solido1 = new Producto(NombreProducto, intPrecioProducto, MarcaProducto, intStockProducto, dbgrsProducto, "s");
                                 a.AgregaProductos(Solido1);
                             }
+
+
+
+
+
+
+
+
+
+
 
 
                         }
