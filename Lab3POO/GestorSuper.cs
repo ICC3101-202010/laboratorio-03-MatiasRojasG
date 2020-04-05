@@ -27,10 +27,41 @@ namespace Lab3POO
         //Lista Auxiliares
         public List<Persona> Supervisores = new List<Persona> { };
         //Lista compras hechas
-        public List<Producto> compras = new List<Producto> { };
+        public List<Producto> compras1 = new List<Producto> { };
         //Lista precio total
-        public List<int> preciototal = new List<int> { };
-        int preciototalcompra;
+        public List<int> preciototal1 = new List<int> { };
+
+        public List<Producto> compras2 = new List<Producto> { };
+        //Lista precio total
+        public List<int> preciototal2= new List<int> { };
+
+        public List<Producto> compras3 = new List<Producto> { };
+        //Lista precio total
+        public List<int> preciototal3 = new List<int> { };
+
+        public List<Producto> compras4 = new List<Producto> { };
+        //Lista precio total
+        public List<int> preciototal4 = new List<int> { };
+
+        public List<Producto> compras5 = new List<Producto> { };
+        //Lista precio total
+        public List<int> preciototal5 = new List<int> { };
+
+
+
+
+
+
+
+
+
+
+        int preciototalcompra1;
+        int preciototalcompra2;
+        int preciototalcompra3;
+        int preciototalcompra4;
+        int preciototalcompra5;
+        int preciototal;
         int numr;
 
 
@@ -40,21 +71,34 @@ namespace Lab3POO
 
         }
         //Agrega la compra a la bolsa
-        public void Compras(Producto productoc)
+        public void Compras1(Producto productoc)
         {
-            compras.Add(productoc);
-            preciototal.Add(productoc.Precio);
+            compras1.Add(productoc);
+            preciototal1.Add(productoc.Precio);
         }
-        public void ElimLista()
+        public void Compras2(Producto productoc)
         {
-            for (numr=0; numr<compras.Count; numr++)
-            {
-                if (numr%5==0)
-                {
-                    compras.Remove(compras[numr]);
-                }
-            }
+            compras2.Add(productoc);
+            preciototal2.Add(productoc.Precio);
         }
+        public void Compras3(Producto productoc)
+        {
+            compras3.Add(productoc);
+            preciototal3.Add(productoc.Precio);
+        }
+        public void Compras4(Producto productoc)
+        {
+            compras4.Add(productoc);
+            preciototal4.Add(productoc.Precio);
+        }
+        public void Compras5(Producto productoc)
+        {
+            compras5.Add(productoc);
+            preciototal5.Add(productoc.Precio);
+        }
+
+
+
 
         //Agrega persona a cliente
         public void AgregaCliente(Persona persona)
@@ -168,16 +212,56 @@ namespace Lab3POO
 
 
 
-        public void InfoCompras()
+        public void InfoCompras1()
         {
-            foreach (Producto product in compras)
+            foreach (Producto product in compras1)
             {
                 Console.WriteLine(product.InformacionP());
-                preciototalcompra += product.Precio;
+                preciototalcompra1 += product.Precio;
             }
-            Console.WriteLine("Precio Total: "+preciototalcompra);
+            Console.WriteLine("Precio Total: "+preciototalcompra1);
         }
-
+        public void InfoCompras2()
+        {
+            foreach (Producto product in compras2)
+            {
+                Console.WriteLine(product.InformacionP());
+                preciototalcompra2 += product.Precio;
+            }
+            Console.WriteLine("Precio Total: " + preciototalcompra2);
+        }
+        public void InfoCompras3()
+        {
+            foreach (Producto product in compras3)
+            {
+                Console.WriteLine(product.InformacionP());
+                preciototalcompra3 += product.Precio;
+            }
+            Console.WriteLine("Precio Total: " + preciototalcompra3);
+        }
+        public void InfoCompras4()
+        {
+            foreach (Producto product in compras4)
+            {
+                Console.WriteLine(product.InformacionP());
+                preciototalcompra4 += product.Precio;
+            }
+            Console.WriteLine("Precio Total: " + preciototalcompra4);
+        }
+        public void InfoCompras5()
+        {
+            foreach (Producto product in compras5)
+            {
+                Console.WriteLine(product.InformacionP());
+                preciototalcompra5 += product.Precio;
+            }
+            Console.WriteLine("Precio Total: " + preciototalcompra5);
+        }
+        public void CompratotalPrecio()
+        {
+            preciototal = preciototalcompra1 + preciototalcompra2 + preciototalcompra3 + preciototalcompra4 + preciototalcompra5;
+            Console.WriteLine(preciototal);
+        }
 
 
         //Metodos que entrega a todas las personas de sus respectivas listas

@@ -12,7 +12,7 @@ namespace Lab3POO
 
         public static void Main(string[] args)
         {
-            string respuesta;//Menu
+            string respuesta;
 
 
             string NombreJefe;
@@ -36,6 +36,10 @@ namespace Lab3POO
 
             string compra1;
             string compra2;
+            string compra3;
+            string compra4;
+            string compra5;
+
             string cuantos1;
             string cuantos2;
             string cuantos3;
@@ -44,8 +48,16 @@ namespace Lab3POO
 
             string cuantos7;
 
-            string cliente;
-            string cajero;
+            string cliente1;
+            string cajero1;
+            string cliente2;
+            string cajero2;
+            string cliente3;
+            string cajero3;
+            string cliente4;
+            string cajero4;
+            string cliente5;
+            string cajero5;
 
 
 
@@ -186,7 +198,7 @@ namespace Lab3POO
 
 
 
-            if (respuestaprimera=="1")
+            if (respuestaprimera == "1")
             {
                 //Web Super
                 {
@@ -194,7 +206,7 @@ namespace Lab3POO
                     {
                         Console.WriteLine("Menú: Elija un valor numérico porfavor");
                         Console.WriteLine(" ");
-                        Console.WriteLine("1) COMENZAR PROGRAMA");
+                        Console.WriteLine("1) COMENZAR Compra");
                         Console.WriteLine("2) Ver productos");
                         Console.WriteLine("3) Ver trabajadores");
                         Console.WriteLine("4) Salir");
@@ -236,7 +248,7 @@ namespace Lab3POO
                             NacJefe = Console.ReadLine();
                             Persona Jefe = new Persona(NombreJefe, ApellidoJefe, RutJefe, "Jefe", FNJefe, NacJefe);
                             a.AgregaJefe(Jefe);
-                        }
+
                             //Se crean cajeros
                             int i1;
                             Console.WriteLine("Creacion Cajeros (a lo menos 1)");
@@ -390,11 +402,11 @@ namespace Lab3POO
                             Console.WriteLine("¿Cuantos desea ingresar?");
                             cuantos5 = Console.ReadLine();
                             int intcuantos5 = System.Convert.ToInt32(cuantos5);
-                            if (intcuantos5==0)
+                            if (intcuantos5 == 0)
                             {
                                 Console.WriteLine("Siguiente");
                             }
-                            if (intcuantos5>0)
+                            if (intcuantos5 > 0)
                             {
                                 for (i5 = 1; i5 <= intcuantos5; i5++)
                                 {
@@ -420,20 +432,18 @@ namespace Lab3POO
 
 
 
-                        //Comienza la compra
 
-                        int i;
-                        for (i = 1; i < 6; i++)
-                        {
+                            //Comienza la compra
+
                             Console.WriteLine(" ");
-                            Console.WriteLine("Compra numero" + " " + i);
-                            cliente = a.EleccionCliente();
-                            cajero = a.EleccionCajero();
+                            Console.WriteLine("Compra numero 1");
+                            cliente1 = a.EleccionCliente();
+                            cajero1 = a.EleccionCajero();
                             Console.WriteLine(" ");
                             Console.WriteLine(" ");
-                            Console.WriteLine("Buenos dias" + " " + cliente);
+                            Console.WriteLine("Buenos dias" + " " + cliente1);
                             Console.WriteLine(" ");
-                            Console.WriteLine("Usted esta siendo atendido por" + " " + cajero);
+                            Console.WriteLine("Usted esta siendo atendido por" + " " + cajero1);
                             Console.WriteLine(" ");
                             while (true)
                             {
@@ -453,18 +463,18 @@ namespace Lab3POO
                                                 {
                                                     l1.CompraProducto();
                                                     l1.InformacionP();
-                                                    a.Compras(l1);
+                                                    a.Compras1(l1);
                                                 }
                                                 else
                                                 {
                                                     break;
                                                 }
-                                            
+
                                             }
-                                        break;
+                                            break;
                                         }
                                     }
-                                    if (compra1=="Solido")
+                                    if (compra1 == "Solido")
                                     {
                                         a.VerProductoss();
                                         while (true)
@@ -477,7 +487,7 @@ namespace Lab3POO
                                                 {
                                                     s1.CompraProducto();
                                                     s1.InformacionP();
-                                                    a.Compras(s1);
+                                                    a.Compras1(s1);
                                                 }
                                                 else
                                                 {
@@ -488,44 +498,319 @@ namespace Lab3POO
                                         }
                                     }
 
-                                    if (compra1=="Nada mas")
+                                    if (compra1 == "Nada mas")
                                     {
-                                        Console.WriteLine(cajero + ": Gracias por su compra" + " " +"Sr/Sra"+" "+cliente);
+                                        Console.WriteLine(cajero1 + ": Gracias por su compra" + " " + "Sr/Sra" + " " + cliente1);
                                         Console.WriteLine("Usted lleva:");
-                                        a.InfoCompras();
-                                        a.ElimLista();
+                                        a.InfoCompras1();
                                         break;
                                     }
                                 }
                             }
+                            Console.WriteLine(" ");
+                            Console.WriteLine("Compra numero 2");
+                            cliente2 = a.EleccionCliente();
+                            cajero2 = a.EleccionCajero();
+                            Console.WriteLine(" ");
+                            Console.WriteLine(" ");
+                            Console.WriteLine("Buenos dias" + " " + cliente2);
+                            Console.WriteLine(" ");
+                            Console.WriteLine("Usted esta siendo atendido por" + " " + cajero2);
+                            Console.WriteLine(" ");
+                            while (true)
+                            {
+                                Console.WriteLine("¿Que tipo de producto desea comprar?");
+                                compra1 = Console.ReadLine();
+                                {
+                                    if (compra1 == "Liquido")
+                                    {
+                                        a.VerProductosl();
+                                        while (true)
+                                        {
+                                            Console.WriteLine("¿Cual desea?");
+                                            compra2 = Console.ReadLine();
+                                            foreach (Producto l1 in a.productoslB)
+                                            {
+                                                if (l1.Name == compra2)
+                                                {
+                                                    l1.CompraProducto();
+                                                    l1.InformacionP();
+                                                    a.Compras2(l1);
+                                                }
+                                                else
+                                                {
+                                                    break;
+                                                }
+
+                                            }
+                                            break;
+                                        }
+                                    }
+                                    if (compra1 == "Solido")
+                                    {
+                                        a.VerProductoss();
+                                        while (true)
+                                        {
+                                            Console.WriteLine("¿Cual desea?");
+                                            compra2 = Console.ReadLine();
+                                            foreach (Producto s1 in a.productossB)
+                                            {
+                                                if (s1.Name == compra2)
+                                                {
+                                                    s1.CompraProducto();
+                                                    s1.InformacionP();
+                                                    a.Compras2(s1);
+                                                }
+                                                else
+                                                {
+                                                    break;
+                                                }
+                                            }
+                                            break;
+                                        }
+                                    }
+
+                                    if (compra1 == "Nada mas")
+                                    {
+                                        Console.WriteLine(cajero2 + ": Gracias por su compra" + " " + "Sr/Sra" + " " + cliente2);
+                                        Console.WriteLine("Usted lleva:");
+                                        a.InfoCompras2();
+                                        break;
+                                    }
+                                }
+                            }
+                            Console.WriteLine(" ");
+                            Console.WriteLine("Compra numero 3");
+                            cliente3 = a.EleccionCliente();
+                            cajero3 = a.EleccionCajero();
+                            Console.WriteLine(" ");
+                            Console.WriteLine(" ");
+                            Console.WriteLine("Buenos dias" + " " + cliente3);
+                            Console.WriteLine(" ");
+                            Console.WriteLine("Usted esta siendo atendido por" + " " + cajero3);
+                            Console.WriteLine(" ");
+                            while (true)
+                            {
+                                Console.WriteLine("¿Que tipo de producto desea comprar?");
+                                compra1 = Console.ReadLine();
+                                {
+                                    if (compra1 == "Liquido")
+                                    {
+                                        a.VerProductosl();
+                                        while (true)
+                                        {
+                                            Console.WriteLine("¿Cual desea?");
+                                            compra2 = Console.ReadLine();
+                                            foreach (Producto l1 in a.productoslB)
+                                            {
+                                                if (l1.Name == compra2)
+                                                {
+                                                    l1.CompraProducto();
+                                                    l1.InformacionP();
+                                                    a.Compras3(l1);
+                                                }
+                                                else
+                                                {
+                                                    break;
+                                                }
+
+                                            }
+                                            break;
+                                        }
+                                    }
+                                    if (compra1 == "Solido")
+                                    {
+                                        a.VerProductoss();
+                                        while (true)
+                                        {
+                                            Console.WriteLine("¿Cual desea?");
+                                            compra2 = Console.ReadLine();
+                                            foreach (Producto s1 in a.productossB)
+                                            {
+                                                if (s1.Name == compra2)
+                                                {
+                                                    s1.CompraProducto();
+                                                    s1.InformacionP();
+                                                    a.Compras3(s1);
+                                                }
+                                                else
+                                                {
+                                                    break;
+                                                }
+                                            }
+                                            break;
+                                        }
+                                    }
+
+                                    if (compra1 == "Nada mas")
+                                    {
+                                        Console.WriteLine(cajero3 + ": Gracias por su compra" + " " + "Sr/Sra" + " " + cliente3);
+                                        Console.WriteLine("Usted lleva:");
+                                        a.InfoCompras3();
+                                        break;
+                                    }
+                                }
+                            }
+
+                            Console.WriteLine(" ");
+                            Console.WriteLine("Compra numero 4");
+                            cliente4 = a.EleccionCliente();
+                            cajero4 = a.EleccionCajero();
+                            Console.WriteLine(" ");
+                            Console.WriteLine(" ");
+                            Console.WriteLine("Buenos dias" + " " + cliente4);
+                            Console.WriteLine(" ");
+                            Console.WriteLine("Usted esta siendo atendido por" + " " + cajero4);
+                            Console.WriteLine(" ");
+                            while (true)
+                            {
+                                Console.WriteLine("¿Que tipo de producto desea comprar?");
+                                compra1 = Console.ReadLine();
+                                {
+                                    if (compra1 == "Liquido")
+                                    {
+                                        a.VerProductosl();
+                                        while (true)
+                                        {
+                                            Console.WriteLine("¿Cual desea?");
+                                            compra2 = Console.ReadLine();
+                                            foreach (Producto l1 in a.productoslB)
+                                            {
+                                                if (l1.Name == compra2)
+                                                {
+                                                    l1.CompraProducto();
+                                                    l1.InformacionP();
+                                                    a.Compras4(l1);
+                                                }
+                                                else
+                                                {
+                                                    break;
+                                                }
+
+                                            }
+                                            break;
+                                        }
+                                    }
+                                    if (compra1 == "Solido")
+                                    {
+                                        a.VerProductoss();
+                                        while (true)
+                                        {
+                                            Console.WriteLine("¿Cual desea?");
+                                            compra2 = Console.ReadLine();
+                                            foreach (Producto s1 in a.productossB)
+                                            {
+                                                if (s1.Name == compra2)
+                                                {
+                                                    s1.CompraProducto();
+                                                    s1.InformacionP();
+                                                    a.Compras4(s1);
+                                                }
+                                                else
+                                                {
+                                                    break;
+                                                }
+                                            }
+                                            break;
+                                        }
+                                    }
+
+                                    if (compra1 == "Nada mas")
+                                    {
+                                        Console.WriteLine(cajero4 + ": Gracias por su compra" + " " + "Sr/Sra" + " " + cliente4);
+                                        Console.WriteLine("Usted lleva:");
+                                        a.InfoCompras4();
+                                        break;
+                                    }
+                                }
+                            }
+                            Console.WriteLine(" ");
+                            Console.WriteLine("Compra numero 5");
+                            cliente5 = a.EleccionCliente();
+                            cajero5 = a.EleccionCajero();
+                            Console.WriteLine(" ");
+                            Console.WriteLine(" ");
+                            Console.WriteLine("Buenos dias" + " " + cliente5);
+                            Console.WriteLine(" ");
+                            Console.WriteLine("Usted esta siendo atendido por" + " " + cajero5);
+                            Console.WriteLine(" ");
+                            while (true)
+                            {
+                                Console.WriteLine("¿Que tipo de producto desea comprar?");
+                                compra1 = Console.ReadLine();
+                                {
+                                    if (compra1 == "Liquido")
+                                    {
+                                        a.VerProductosl();
+                                        while (true)
+                                        {
+                                            Console.WriteLine("¿Cual desea?");
+                                            compra2 = Console.ReadLine();
+                                            foreach (Producto l1 in a.productoslB)
+                                            {
+                                                if (l1.Name == compra2)
+                                                {
+                                                    l1.CompraProducto();
+                                                    l1.InformacionP();
+                                                    a.Compras5(l1);
+                                                }
+                                                else
+                                                {
+                                                    break;
+                                                }
+
+                                            }
+                                            break;
+                                        }
+                                    }
+                                    if (compra1 == "Solido")
+                                    {
+                                        a.VerProductoss();
+                                        while (true)
+                                        {
+                                            Console.WriteLine("¿Cual desea?");
+                                            compra2 = Console.ReadLine();
+                                            foreach (Producto s1 in a.productossB)
+                                            {
+                                                if (s1.Name == compra2)
+                                                {
+                                                    s1.CompraProducto();
+                                                    s1.InformacionP();
+                                                    a.Compras5(s1);
+                                                }
+                                                else
+                                                {
+                                                    break;
+                                                }
+                                            }
+                                            break;
+                                        }
+                                    }
+
+                                    if (compra1 == "Nada mas")
+                                    {
+                                        Console.WriteLine(cajero5 + ": Gracias por su compra" + " " + "Sr/Sra" + " " + cliente5);
+                                        Console.WriteLine("Usted lleva:");
+                                        a.InfoCompras5();
+                                        break;
+                                    }
+                                }
+                            }
+                            Console.WriteLine("El dia de hoy se vendio:");
+                            a.CompratotalPrecio();
+                            Console.WriteLine(cajero1 + " vendio:");
+                            a.InfoCompras1();
+                            Console.WriteLine(cajero2 + " vendio:");
+                            a.InfoCompras2();
+                            Console.WriteLine(cajero3 + " vendio:");
+                            a.InfoCompras3();
+                            Console.WriteLine(cajero4 + " vendio:");
+                            a.InfoCompras4();
+                            Console.WriteLine(cajero5 + " vendio:");
+                            a.InfoCompras5();
                         }
-                            
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        
                         if (respuesta == "4")
                         {
                             Console.WriteLine("Saliendo...");
@@ -533,12 +818,7 @@ namespace Lab3POO
                         }
                     }
                 }
-                if (respuestaprimera == "2")
-                {
-
-                }
             }
         }
     }
 }
-
