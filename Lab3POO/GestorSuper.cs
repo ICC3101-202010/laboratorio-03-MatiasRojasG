@@ -26,9 +26,12 @@ namespace Lab3POO
         public List<string> apellidosB = new List<string> { };
         //Lista Auxiliares
         public List<Persona> Supervisores = new List<Persona> { };
-
-
-
+        //Lista compras hechas
+        public List<Producto> compras = new List<Producto> { };
+        //Lista precio total
+        public List<int> preciototal = new List<int> { };
+        int preciototalcompra;
+        int numr;
 
 
         //Constructor vacio
@@ -36,6 +39,23 @@ namespace Lab3POO
         {
 
         }
+        //Agrega la compra a la bolsa
+        public void Compras(Producto productoc)
+        {
+            compras.Add(productoc);
+            preciototal.Add(productoc.Precio);
+        }
+        public void ElimLista()
+        {
+            for (numr=0; numr<compras.Count; numr++)
+            {
+                if (numr%5==0)
+                {
+                    compras.Remove(compras[numr]);
+                }
+            }
+        }
+
         //Agrega persona a cliente
         public void AgregaCliente(Persona persona)
         {
@@ -148,7 +168,15 @@ namespace Lab3POO
 
 
 
-
+        public void InfoCompras()
+        {
+            foreach (Producto product in compras)
+            {
+                Console.WriteLine(product.InformacionP());
+                preciototalcompra += product.Precio;
+            }
+            Console.WriteLine("Precio Total: "+preciototalcompra);
+        }
 
 
 
@@ -210,5 +238,21 @@ namespace Lab3POO
             //Resta producto de la lista
         }
 
+
+
+
+
+        public string EleccionCliente()
+        {
+            var random1 = new Random();
+            int index1 = random1.Next(clientesB.Count);
+            return clientesB[index1].Name+" "+clientesB[index1].Apellido;
+        }
+        public string EleccionCajero()
+        {
+            var random2 = new Random();
+            int index1 = random2.Next(cajerosB.Count);
+            return cajerosB[index1].Name + " " + cajerosB[index1].Apellido;
+        }
     }
 }
