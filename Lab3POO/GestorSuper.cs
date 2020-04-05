@@ -214,46 +214,52 @@ namespace Lab3POO
 
         public void InfoCompras1()
         {
-            foreach (Producto product in compras1)
+            preciototalcompra1 = 0;
+            foreach (Producto product1 in compras1)
             {
-                Console.WriteLine(product.InformacionP());
-                preciototalcompra1 += product.Precio;
+                Console.WriteLine(product1.InformacionP());
+                preciototalcompra1 += product1.Precio;
             }
             Console.WriteLine("Precio Total: "+preciototalcompra1);
         }
         public void InfoCompras2()
         {
-            foreach (Producto product in compras2)
+            preciototalcompra2 = 0;
+            foreach (Producto product2 in compras2)
             {
-                Console.WriteLine(product.InformacionP());
-                preciototalcompra2 += product.Precio;
+                Console.WriteLine(product2.InformacionP());
+                preciototalcompra2 += product2.Precio;
             }
             Console.WriteLine("Precio Total: " + preciototalcompra2);
         }
         public void InfoCompras3()
         {
-            foreach (Producto product in compras3)
+            preciototalcompra3 = 0;
+      
+            foreach (Producto product3 in compras3)
             {
-                Console.WriteLine(product.InformacionP());
-                preciototalcompra3 += product.Precio;
+                Console.WriteLine(product3.InformacionP());
+                preciototalcompra3 += product3.Precio;
             }
             Console.WriteLine("Precio Total: " + preciototalcompra3);
         }
         public void InfoCompras4()
         {
-            foreach (Producto product in compras4)
+            preciototalcompra4 = 0;
+            foreach (Producto product4 in compras4)
             {
-                Console.WriteLine(product.InformacionP());
-                preciototalcompra4 += product.Precio;
+                Console.WriteLine(product4.InformacionP());
+                preciototalcompra4 += product4.Precio;
             }
             Console.WriteLine("Precio Total: " + preciototalcompra4);
         }
         public void InfoCompras5()
         {
-            foreach (Producto product in compras5)
+            preciototalcompra5 = 0;
+            foreach (Producto product5 in compras5)
             {
-                Console.WriteLine(product.InformacionP());
-                preciototalcompra5 += product.Precio;
+                Console.WriteLine(product5.InformacionP());
+                preciototalcompra5 += product5.Precio;
             }
             Console.WriteLine("Precio Total: " + preciototalcompra5);
         }
