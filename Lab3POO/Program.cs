@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
-
+using System.Globalization;
 namespace Lab3POO
 {
     class MainClass
@@ -12,6 +12,7 @@ namespace Lab3POO
 
         public static void Main(string[] args)
         {
+            DateTime horacompra = DateTime.Now;
             string respuesta;
 
 
@@ -33,6 +34,12 @@ namespace Lab3POO
             string grsProducto;
             string PrecioProducto;
             string ltsProducto;
+
+            string hora1;
+            string hora2;
+            string hora3;
+            string hora4;
+            string hora5;
 
             string compra1;
             string compra2;
@@ -325,6 +332,7 @@ namespace Lab3POO
                                                 if (l1.Name == compra2)
                                                 {
                                                     l1.CompraProducto();
+
                                                     l1.InformacionP();
                                                     a.Compras1(l1);
                                                 }
@@ -363,8 +371,11 @@ namespace Lab3POO
 
                                     if (compra1 == "Nada mas")
                                     {
+
                                         Console.WriteLine(cajero1 + ": Gracias por su compra" + " " + "Sr/Sra" + " " + cliente1);
                                         Console.WriteLine("Usted lleva:");
+                                        hora1 = (horacompra.Hour + ":" + horacompra.Minute);
+                                Console.WriteLine(hora1);
                                         a.InfoCompras1();
                                         break;
                                     }
@@ -437,8 +448,11 @@ namespace Lab3POO
                                     {
                                         Console.WriteLine(cajero2 + ": Gracias por su compra" + " " + "Sr/Sra" + " " + cliente2);
                                         Console.WriteLine("Usted lleva:");
-                                        a.InfoCompras2();
-                                        break;
+                              
+                                a.InfoCompras2();
+                                hora2 = (horacompra.Hour + ":" + horacompra.Minute);
+                                Console.WriteLine(hora2);
+                                break;
                                     }
                                 }
                             }
@@ -510,7 +524,9 @@ namespace Lab3POO
                                         Console.WriteLine(cajero3 + ": Gracias por su compra" + " " + "Sr/Sra" + " " + cliente3);
                                         Console.WriteLine("Usted lleva:");
                                         a.InfoCompras3();
-                                        break;
+                                hora3 = (horacompra.Hour + ":" + horacompra.Minute);
+                                Console.WriteLine(hora3);
+                                break;
                                     }
                                 }
                             }
@@ -583,7 +599,9 @@ namespace Lab3POO
                                         Console.WriteLine(cajero4 + ": Gracias por su compra" + " " + "Sr/Sra" + " " + cliente4);
                                         Console.WriteLine("Usted lleva:");
                                         a.InfoCompras4();
-                                        break;
+                                hora4 = (horacompra.Hour + ":" + horacompra.Minute);
+                                Console.WriteLine(hora4);
+                                break;
                                     }
                                 }
                             }
@@ -655,7 +673,9 @@ namespace Lab3POO
                                         Console.WriteLine(cajero5 + ": Gracias por su compra" + " " + "Sr/Sra" + " " + cliente5);
                                         Console.WriteLine("Usted lleva:");
                                         a.InfoCompras5();
-                                        break;
+                                hora5 = (horacompra.Hour + ":" + horacompra.Minute);
+                                Console.WriteLine(hora5);
+                                break;
                                     }
                                 }
                             }
@@ -663,15 +683,21 @@ namespace Lab3POO
                             a.CompratotalPrecio();
                             Console.WriteLine(cajero1 + " vendio:");
                             a.InfoCompras1();
+                    Console.WriteLine(hora1);
                             Console.WriteLine(cajero2 + " vendio:");
                             a.InfoCompras2();
+                    Console.WriteLine(hora2);
                             Console.WriteLine(cajero3 + " vendio:");
                             a.InfoCompras3();
+                    Console.WriteLine(hora3);
                             Console.WriteLine(cajero4 + " vendio:");
                             a.InfoCompras4();
+                    Console.WriteLine(hora4);
                             Console.WriteLine(cajero5 + " vendio:");
                             a.InfoCompras5();
+                    Console.WriteLine(hora5);
                         }
+
 
 
                     if (respuesta == "4")
