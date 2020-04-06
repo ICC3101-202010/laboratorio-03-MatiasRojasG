@@ -105,5 +105,9 @@ namespace Lab3POO
         {
             return "Nombre: " + Name + " " + Apellido;
         }
+        public string InformacionT()
+        {
+            return "Nombre: " + Name + " " + Apellido+" "+"Rut: "+RUT+" "+" "+"Sueldo: "+Sueldo+" "+"Horario: "+Horario;
+        }
     }
 }

@@ -683,18 +683,23 @@ namespace Lab3POO
                             a.CompratotalPrecio();
                             Console.WriteLine(cajero1 + " vendio:");
                             a.InfoCompras1();
+                    Console.WriteLine("Cliente: " + cliente1);
                     Console.WriteLine(hora1);
                             Console.WriteLine(cajero2 + " vendio:");
                             a.InfoCompras2();
+                    Console.WriteLine("Cliente: " + cliente2);
                     Console.WriteLine(hora2);
                             Console.WriteLine(cajero3 + " vendio:");
                             a.InfoCompras3();
+                    Console.WriteLine("Cliente: " + cliente3);
                     Console.WriteLine(hora3);
                             Console.WriteLine(cajero4 + " vendio:");
                             a.InfoCompras4();
+                    Console.WriteLine("Cliente: " + cliente4);
                     Console.WriteLine(hora4);
                             Console.WriteLine(cajero5 + " vendio:");
                             a.InfoCompras5();
+                    Console.WriteLine("Cliente: " + cliente5);
                     Console.WriteLine(hora5);
                         }
 
@@ -705,7 +710,7 @@ namespace Lab3POO
                             Console.WriteLine("Saliendo...");
                             break;
                     }
-                    }   
+            }   
         }
     }
 }

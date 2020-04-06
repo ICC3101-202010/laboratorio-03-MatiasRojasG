@@ -62,7 +62,6 @@ namespace Lab3POO
         int preciototalcompra4;
         int preciototalcompra5;
         int preciototal;
-        int numr;
 
 
         //Constructor vacio
@@ -155,63 +154,6 @@ namespace Lab3POO
 
 
 
-
-        //Añado nombres a su lista
-        public void AN()
-        {
-            nombresB.Add("Miguel");
-            nombresB.Add("Arturo");
-            nombresB.Add("Jorge");
-            nombresB.Add("Armando");
-            nombresB.Add("Luis");
-            nombresB.Add("Adolfo");
-            nombresB.Add("Eufemiano");
-            nombresB.Add("Carlos");
-            nombresB.Add("Alejandro");
-            nombresB.Add("Gabriel");
-            nombresB.Add("Mariana");
-            nombresB.Add("Beatriz");
-            nombresB.Add("Helen");
-            nombresB.Add("Maria");
-            nombresB.Add("Paola");
-            nombresB.Add("Paulina");
-            nombresB.Add("Luisa");
-            nombresB.Add("Marta");
-            nombresB.Add("Pilar");
-            nombresB.Add("Trinidad");
-            nombresB.Add("Juan");
-            nombresB.Add("David");
-        }
-        //Añado apellidos a su lista
-        public void AA()
-        {
-            apellidosB.Add("Pallares");
-            apellidosB.Add("Cervero");
-            apellidosB.Add("Parras");
-            apellidosB.Add("Rius");
-            apellidosB.Add("Funes");
-            apellidosB.Add("Escrig");
-            apellidosB.Add("Larraz");
-            apellidosB.Add("Sendra");
-            apellidosB.Add("Alamillo");
-            apellidosB.Add("Lloveras");
-            apellidosB.Add("Sotelo");
-            apellidosB.Add("Pacheco");
-            apellidosB.Add("Arias");
-            apellidosB.Add("Garcia");
-            apellidosB.Add("Mena");
-            apellidosB.Add("Rouco");
-            apellidosB.Add("Coleto");
-            apellidosB.Add("Valderrama");
-            apellidosB.Add("Soldevila");
-            apellidosB.Add("Arnau");
-            apellidosB.Add("Berenguer");
-            apellidosB.Add("Zabala");
-        }
-
-
-
-
         public void InfoCompras1()
         {
             preciototalcompra1 = 0;
@@ -276,7 +218,7 @@ namespace Lab3POO
             Console.WriteLine("Mostrando Jefes:");
             foreach (Persona ij in jefesB)
             {
-                Console.WriteLine(ij.Informacion());
+                Console.WriteLine(ij.InformacionT());
             }
             Console.WriteLine(" ");
         }
@@ -285,7 +227,7 @@ namespace Lab3POO
             Console.WriteLine("Mostrando Cajeros:");
             foreach (Persona ie in cajerosB)
             {
-                Console.WriteLine(ie.Informacion());
+                Console.WriteLine(ie.InformacionT());
             }
             Console.WriteLine(" ");
         }
@@ -294,7 +236,7 @@ namespace Lab3POO
             Console.WriteLine("Mostrando Auxiliares");
             foreach (Persona ia in auxiliaresB)
             {
-                Console.WriteLine(ia.Informacion());
+                Console.WriteLine(ia.InformacionT());
             }
             Console.WriteLine(" ");
         }
@@ -303,7 +245,7 @@ namespace Lab3POO
             Console.WriteLine("Mostrando Clientes:");
             foreach (Persona ic in clientesB)
             {
-                Console.WriteLine(ic.Informacion());
+                Console.WriteLine(ic.InformacionT());
             }
             Console.WriteLine(" ");
         }
@@ -321,11 +263,6 @@ namespace Lab3POO
             {
                 Console.WriteLine(ind.InformacionP());
             }
-        }
-        public void Compra(Persona cliente, Producto producto)
-        {
-            //Cliente Compra
-            //Resta producto de la lista
         }
 
 
